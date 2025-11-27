@@ -1,9 +1,10 @@
 .calendar {
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
   gap: $block-gap;
-  padding: 10px;
-  width: ($block-size * 7) + ($block-gap * (7 - 1));
+  padding: $padding-size;
+  width: ($block-size * 7) + ($block-gap * (7 - 1)) + ($padding-size * 2);
 
   @each $day, $offset in $day-of-the-week {
     &--start-day-#{$day} {
