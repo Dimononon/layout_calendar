@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: $block-gap;
+  padding: 10px;
   width: ($block-size * 7) + ($block-gap * (7 - 1));
 
   @each $day, $offset in $day-of-the-week {
@@ -32,6 +33,7 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    transition-duration: 0.5s;
 
     @for $i from 1 through 31 {
       &:nth-child(#{$i}) {
@@ -45,7 +47,6 @@
       cursor: pointer;
       background-color: #ffbfcb;
       transform: translateY(-20px);
-      transition-duration: 0.5s;
     }
   }
 }
